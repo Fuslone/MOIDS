@@ -45,13 +45,13 @@ echo                      ------------------------------------
 echo.
 choice /n /c 1230
 if !errorlevel! == 1 (
-set "InstallationType=Online x32"
-set platform=x86
+    set "InstallationType=Online x32"
+    set platform=x86
 ) else if !errorlevel! == 2 (
-set "InstallationType=Online x64"
-set platform=x64
+    set "InstallationType=Online x64"
+    set platform=x64
 ) else if !errorlevel! == 3 (
-set "InstallationType=Offline x32 & x64"
+    set "InstallationType=Offline x32 & x64"
 )
 if "!confirmation!" == "no" goto confirmation
 if !errorlevel! == 4 goto start
@@ -75,29 +75,29 @@ echo                      ------------------------------------
 echo.
 choice /n /c 1234560
 if not !errorlevel! == 7 (
-if !errorlevel! == 1 (
-set "FullVersion=Microsoft 365"
-set version=365
-) else if !errorlevel! == 2 (
-set "FullVersion=Office 2024"
-set version=2024
-) else if !errorlevel! == 3 (
-set "FullVersion=Office 2021"
-set version=2021
-) else if !errorlevel! == 4 (
-set "FullVersion=Office 2019"
-set version=2019
-) else if !errorlevel! == 5 (
-set "FullVersion=Office 2016"
-set version=2016
-) else if !errorlevel! == 6 (
-set "FullVersion=Office 2013"
-set version=2013
-)
-goto !version!
+    if !errorlevel! == 1 (
+        set "FullVersion=Microsoft 365"
+        set version=365
+    ) else if !errorlevel! == 2 (
+        set "FullVersion=Office 2024"
+        set version=2024
+    ) else if !errorlevel! == 3 (
+        set "FullVersion=Office 2021"
+        set version=2021
+    ) else if !errorlevel! == 4 (
+        set "FullVersion=Office 2019"
+        set version=2019
+    ) else if !errorlevel! == 5 (
+        set "FullVersion=Office 2016"
+        set version=2016
+    ) else if !errorlevel! == 6 (
+        set "FullVersion=Office 2013"
+        set version=2013
+    )
+    goto !version!
 ) else (
-if "!confirmation!" == "no" goto confirmation
-goto InstallationType
+    if "!confirmation!" == "no" goto confirmation
+    goto InstallationType
 )
 :365
 mode con: lines=19
@@ -121,29 +121,29 @@ echo                      ------------------------------------
 echo.
 choice /n /c 123456780
 if not !errorlevel! == 9 (
-if !errorlevel! == 1 (
-set specification=ProPlus
-) else if !errorlevel! == 2 (
-set specification=AppsBasic
-) else if !errorlevel! == 3 (
-set specification=Business
-) else if !errorlevel! == 4 (
-set specification=EduCloud
-) else if !errorlevel! == 5 (
-set specification=HomePrem
-) else if !errorlevel! == 6 (
-set specification=SmallBusPrem
-) else if !errorlevel! == 7 (
-set specification=ProjectPro
-) else if !errorlevel! == 8 (
-set specification=VisioPro
-)
-set ProductReleaseID=O365!specification!Retail
-if "!confirmation!" == "no" goto confirmation
-goto language
+    if !errorlevel! == 1 (
+        set specification=ProPlus
+    ) else if !errorlevel! == 2 (
+        set specification=AppsBasic
+    ) else if !errorlevel! == 3 (
+        set specification=Business
+    ) else if !errorlevel! == 4 (
+        set specification=EduCloud
+    ) else if !errorlevel! == 5 (
+        set specification=HomePrem
+    ) else if !errorlevel! == 6 (
+        set specification=SmallBusPrem
+    ) else if !errorlevel! == 7 (
+        set specification=ProjectPro
+    ) else if !errorlevel! == 8 (
+        set specification=VisioPro
+    )
+    set ProductReleaseID=O365!specification!Retail
+    if "!confirmation!" == "no" goto confirmation
+    goto language
 ) else (
-if "!confirmation!" == "no" goto confirmation
-goto version
+    if "!confirmation!" == "no" goto confirmation
+    goto version
 )
 :2024
 mode con: lines=23
@@ -171,37 +171,37 @@ echo                      ------------------------------------
 echo.
 choice /n /c ABCDEFGHIJKL0
 if not !errorlevel! == 13 (
-if !errorlevel! == 1 (
-set specification=Access
-) else if !errorlevel! == 2 (
-set specification=Excel
-) else if !errorlevel! == 3 (
-set specification=Home
-) else if !errorlevel! == 4 (
-set specification=HomeBusiness
-) else if !errorlevel! == 5 (
-set specification=Outlook
-) else if !errorlevel! == 6 (
-set specification=PowerPoint
-) else if !errorlevel! == 7 (
-set specification=ProjectPro
-) else if !errorlevel! == 8 (
-set specification=ProjectStd
-) else if !errorlevel! == 9 (
-set specification=ProPlus
-) else if !errorlevel! == 10 (
-set specification=VisioPro
-) else if !errorlevel! == 11 (
-set specification=VisioStd
-) else if !errorlevel! == 12 (
-set specification=Word
-)
-set ProductReleaseID=!specification!2024Retail
-if "!confirmation!" == "no" goto confirmation
-goto language
+    if !errorlevel! == 1 (
+        set specification=Access
+    ) else if !errorlevel! == 2 (
+        set specification=Excel
+    ) else if !errorlevel! == 3 (
+        set specification=Home
+    ) else if !errorlevel! == 4 (
+        set specification=HomeBusiness
+    ) else if !errorlevel! == 5 (
+        set specification=Outlook
+    ) else if !errorlevel! == 6 (
+        set specification=PowerPoint
+    ) else if !errorlevel! == 7 (
+        set specification=ProjectPro
+    ) else if !errorlevel! == 8 (
+        set specification=ProjectStd
+    ) else if !errorlevel! == 9 (
+        set specification=ProPlus
+    ) else if !errorlevel! == 10 (
+        set specification=VisioPro
+    ) else if !errorlevel! == 11 (
+        set specification=VisioStd
+    ) else if !errorlevel! == 12 (
+        set specification=Word
+    )
+    set ProductReleaseID=!specification!2024Retail
+    if "!confirmation!" == "no" goto confirmation
+    goto language
 ) else (
-if "!confirmation!" == "no" goto confirmation
-goto version
+    if "!confirmation!" == "no" goto confirmation
+    goto version
 )
 :2021
 mode con: lines=29
@@ -235,49 +235,49 @@ echo                      ------------------------------------
 echo.
 choice /n /c ABCDEFGHIJKLMNOPQR0
 if not !errorlevel! == 19 (
-if !errorlevel! == 1 (
-set specification=Access
-) else if !errorlevel! == 2 (
-set specification=Excel
-) else if !errorlevel! == 3 (
-set specification=HomeBusiness
-) else if !errorlevel! == 4 (
-set specification=HomeStudent
-) else if !errorlevel! == 5 (
-set specification=OneNote
-) else if !errorlevel! == 6 (
-set specification=Outlook
-) else if !errorlevel! == 7 (
-set specification=Personal
-) else if !errorlevel! == 8 (
-set specification=PowerPoint
-) else if !errorlevel! == 9 (
-set specification=Professional
-) else if !errorlevel! == 10 (
-set specification=ProjectPro
-) else if !errorlevel! == 11 (
-set specification=ProjectStd
-) else if !errorlevel! == 12 (
-set specification=ProPlus
-) else if !errorlevel! == 13 (
-set specification=Publisher
-) else if !errorlevel! == 14 (
-set specification=SkypeforBusiness
-) else if !errorlevel! == 15 (
-set specification=Standard
-) else if !errorlevel! == 16 (
-set specification=VisioPro
-) else if !errorlevel! == 17 (
-set specification=VisioStd
-) else if !errorlevel! == 18 (
-set specification=Word
-)
-set ProductReleaseID=!specification!2021Retail
-if "!confirmation!" == "no" goto confirmation
-goto language
+    if !errorlevel! == 1 (
+        set specification=Access
+    ) else if !errorlevel! == 2 (
+        set specification=Excel
+    ) else if !errorlevel! == 3 (
+        set specification=HomeBusiness
+    ) else if !errorlevel! == 4 (
+        set specification=HomeStudent
+    ) else if !errorlevel! == 5 (
+        set specification=OneNote
+    ) else if !errorlevel! == 6 (
+        set specification=Outlook
+    ) else if !errorlevel! == 7 (
+        set specification=Personal
+    ) else if !errorlevel! == 8 (
+        set specification=PowerPoint
+    ) else if !errorlevel! == 9 (
+        set specification=Professional
+    ) else if !errorlevel! == 10 (
+        set specification=ProjectPro
+    ) else if !errorlevel! == 11 (
+        set specification=ProjectStd
+    ) else if !errorlevel! == 12 (
+        set specification=ProPlus
+    ) else if !errorlevel! == 13 (
+        set specification=Publisher
+    ) else if !errorlevel! == 14 (
+        set specification=SkypeforBusiness
+    ) else if !errorlevel! == 15 (
+        set specification=Standard
+    ) else if !errorlevel! == 16 (
+        set specification=VisioPro
+    ) else if !errorlevel! == 17 (
+        set specification=VisioStd
+    ) else if !errorlevel! == 18 (
+        set specification=Word
+    )
+    set ProductReleaseID=!specification!2021Retail
+    if "!confirmation!" == "no" goto confirmation
+    goto language
 ) else (
-if "!confirmation!" == "no" goto confirmation
-goto version
+    if "!confirmation!" == "no" goto confirmation
+    goto version
 )
 :2019
 mode con: lines=30
@@ -312,51 +312,51 @@ echo                      ------------------------------------
 echo.
 choice /n /c ABCDEFGHIJKLMNOPQRS0
 if not !errorlevel! == 20 (
-if !errorlevel! == 1 (
-set specification=Access
-) else if !errorlevel! == 2 (
-set specification=AccessRuntime
-) else if !errorlevel! == 3 (
-set specification=Excel
-) else if !errorlevel! == 4 (
-set specification=HomeBusiness
-) else if !errorlevel! == 5 (
-set specification=HomeStudent
-) else if !errorlevel! == 6 (
-set specification=Outlook
-) else if !errorlevel! == 7 (
-set specification=Personal
-) else if !errorlevel! == 8 (
-set specification=PowerPoint
-) else if !errorlevel! == 9 (
-set specification=Professional
-) else if !errorlevel! == 10 (
-set specification=ProjectPro
-) else if !errorlevel! == 11 (
-set specification=ProjectStd
-) else if !errorlevel! == 12 (
-set specification=ProPlus
-) else if !errorlevel! == 13 (
-set specification=Publisher
-) else if !errorlevel! == 14 (
-set specification=SkypeforBusiness
-) else if !errorlevel! == 15 (
-set specification=SkypeforBusinessEntry
-) else if !errorlevel! == 16 (
-set specification=Standard
-) else if !errorlevel! == 17 (
-set specification=VisioPro
-) else if !errorlevel! == 18 (
-set specification=VisioStd
-) else if !errorlevel! == 19 (
-set specification=Word
-)
-set ProductReleaseID=!specification!2019Retail
-if "!confirmation!" == "no" goto confirmation
-goto language
+    if !errorlevel! == 1 (
+        set specification=Access
+    ) else if !errorlevel! == 2 (
+        set specification=AccessRuntime
+    ) else if !errorlevel! == 3 (
+        set specification=Excel
+    ) else if !errorlevel! == 4 (
+        set specification=HomeBusiness
+    ) else if !errorlevel! == 5 (
+        set specification=HomeStudent
+    ) else if !errorlevel! == 6 (
+        set specification=Outlook
+    ) else if !errorlevel! == 7 (
+        set specification=Personal
+    ) else if !errorlevel! == 8 (
+        set specification=PowerPoint
+    ) else if !errorlevel! == 9 (
+        set specification=Professional
+    ) else if !errorlevel! == 10 (
+        set specification=ProjectPro
+    ) else if !errorlevel! == 11 (
+        set specification=ProjectStd
+    ) else if !errorlevel! == 12 (
+        set specification=ProPlus
+    ) else if !errorlevel! == 13 (
+        set specification=Publisher
+    ) else if !errorlevel! == 14 (
+        set specification=SkypeforBusiness
+    ) else if !errorlevel! == 15 (
+        set specification=SkypeforBusinessEntry
+    ) else if !errorlevel! == 16 (
+        set specification=Standard
+    ) else if !errorlevel! == 17 (
+        set specification=VisioPro
+    ) else if !errorlevel! == 18 (
+        set specification=VisioStd
+    ) else if !errorlevel! == 19 (
+        set specification=Word
+    )
+    set ProductReleaseID=!specification!2019Retail
+    if "!confirmation!" == "no" goto confirmation
+    goto language
 ) else (
-if "!confirmation!" == "no" goto confirmation
-goto version
+    if "!confirmation!" == "no" goto confirmation
+    goto version
 )
 :2016
 mode con: lines=37
@@ -398,65 +398,65 @@ echo                      ------------------------------------
 echo.
 choice /n /c ABCDEFGHIJKLMNOPQRSTUVWXYZ0
 if not !errorlevel! == 27 (
-if !errorlevel! == 1 (
-set specification=Access
-) else if !errorlevel! == 2 (
-set specification=AccessRuntime
-) else if !errorlevel! == 3 (
-set specification=Excel
-) else if !errorlevel! == 4 (
-set specification=HomeBusinessPipc
-) else if !errorlevel! == 5 (
-set specification=HomeBusiness
-) else if !errorlevel! == 6 (
-set specification=HomeStudent
-) else if !errorlevel! == 7 (
-set specification=HomeStudentVNext
-) else if !errorlevel! == 8 (
-set specification=OneNoteFree
-) else if !errorlevel! == 9 (
-set specification=OneNote
-) else if !errorlevel! == 10 (
-set specification=Outlook
-) else if !errorlevel! == 11 (
-set specification=PersonalPipc
-) else if !errorlevel! == 12 (
-set specification=Personal
-) else if !errorlevel! == 13 (
-set specification=PowerPoint
-) else if !errorlevel! == 14 (
-set specification=Professional
-) else if !errorlevel! == 15 (
-set specification=Professional
-) else if !errorlevel! == 16 (
-set specification=ProjectPro
-) else if !errorlevel! == 17 (
-set specification=ProjectStd
-) else if !errorlevel! == 18 (
-set specification=ProPlus
-) else if !errorlevel! == 19 (
-set specification=Publisher
-) else if !errorlevel! == 20 (
-set specification=SkypeforBusinessEntry
-) else if !errorlevel! == 21 (
-set specification=SkypeforBusiness
-) else if !errorlevel! == 22 (
-set specification=SkypeServiceBypass
-) else if !errorlevel! == 23 (
-set specification=Standard
-) else if !errorlevel! == 24 (
-set specification=VisioPro
-) else if !errorlevel! == 25 (
-set specification=VisioStd
-) else if !errorlevel! == 26 (
-set specification=Word
-)
-set ProductReleaseID=!specification!Retail
-if "!confirmation!" == "no" goto confirmation
-goto language
+    if !errorlevel! == 1 (
+        set specification=Access
+    ) else if !errorlevel! == 2 (
+        set specification=AccessRuntime
+    ) else if !errorlevel! == 3 (
+        set specification=Excel
+    ) else if !errorlevel! == 4 (
+        set specification=HomeBusinessPipc
+    ) else if !errorlevel! == 5 (
+        set specification=HomeBusiness
+    ) else if !errorlevel! == 6 (
+        set specification=HomeStudent
+    ) else if !errorlevel! == 7 (
+        set specification=HomeStudentVNext
+    ) else if !errorlevel! == 8 (
+        set specification=OneNoteFree
+    ) else if !errorlevel! == 9 (
+        set specification=OneNote
+    ) else if !errorlevel! == 10 (
+        set specification=Outlook
+    ) else if !errorlevel! == 11 (
+        set specification=PersonalPipc
+    ) else if !errorlevel! == 12 (
+        set specification=Personal
+    ) else if !errorlevel! == 13 (
+        set specification=PowerPoint
+    ) else if !errorlevel! == 14 (
+        set specification=ProfessionalPipc
+    ) else if !errorlevel! == 15 (
+        set specification=Professional
+    ) else if !errorlevel! == 16 (
+        set specification=ProjectPro
+    ) else if !errorlevel! == 17 (
+        set specification=ProjectStd
+    ) else if !errorlevel! == 18 (
+        set specification=ProPlus
+    ) else if !errorlevel! == 19 (
+        set specification=Publisher
+    ) else if !errorlevel! == 20 (
+        set specification=SkypeforBusinessEntry
+    ) else if !errorlevel! == 21 (
+        set specification=SkypeforBusiness
+    ) else if !errorlevel! == 22 (
+        set specification=SkypeServiceBypass
+    ) else if !errorlevel! == 23 (
+        set specification=Standard
+    ) else if !errorlevel! == 24 (
+        set specification=VisioPro
+    ) else if !errorlevel! == 25 (
+        set specification=VisioStd
+    ) else if !errorlevel! == 26 (
+        set specification=Word
+    )
+    set ProductReleaseID=!specification!Retail
+    if "!confirmation!" == "no" goto confirmation
+    goto language
 ) else (
-if "!confirmation!" == "no" goto confirmation
-goto version
+    if "!confirmation!" == "no" goto confirmation
+    goto version
 )
 :2013
 mode con: lines=42
@@ -503,75 +503,75 @@ echo                      ------------------------------------
 echo.
 choice /n /c 12345ABCDEFGHIJKLMNOPQRSTUVWXYZ0
 if not !errorlevel! == 32 (
-if !errorlevel! == 1 (
-set specification=Access
-) else if !errorlevel! == 2 (
-set specification=Excel
-) else if !errorlevel! == 3 (
-set specification=Groove
-) else if !errorlevel! == 4 (
-set specification=HomeBusinessPipc
-) else if !errorlevel! == 5 (
-set specification=HomeBusiness
-) else if !errorlevel! == 6 (
-set specification=HomeStudent
-) else if !errorlevel! == 7 (
-set specification=InfoPath
-) else if !errorlevel! == 8 (
-set specification=LyncAcademic
-) else if !errorlevel! == 9 (
-set specification=LyncEntry
-) else if !errorlevel! == 10 (
-set specification=Lync
-) else if !errorlevel! == 11 (
-set specification=O365Business
-) else if !errorlevel! == 12 (
-set specification=O365HomePrem
-) else if !errorlevel! == 13 (
-set specification=O365ProPlus
-) else if !errorlevel! == 14 (
-set specification=O365SmallBusPrem
-) else if !errorlevel! == 15 (
-set specification=OneNoteFree
-) else if !errorlevel! == 16 (
-set specification=OneNote
-) else if !errorlevel! == 17 (
-set specification=Outlook
-) else if !errorlevel! == 18 (
-set specification=PersonalPipc
-) else if !errorlevel! == 19 (
-set specification=Personal
-) else if !errorlevel! == 20 (
-set specification=PowerPoint
-) else if !errorlevel! == 21 (
-set specification=ProfessionalPipc
-) else if !errorlevel! == 22 (
-set specification=Professional
-) else if !errorlevel! == 23 (
-set specification=ProjectPro
-) else if !errorlevel! == 24 (
-set specification=ProjectStd
-) else if !errorlevel! == 25 (
-set specification=ProPlus
-) else if !errorlevel! == 26 (
-set specification=Publisher
-) else if !errorlevel! == 27 (
-set specification=SPD
-) else if !errorlevel! == 28 (
-set specification=Standard
-) else if !errorlevel! == 29 (
-set specification=VisioPro
-) else if !errorlevel! == 30 (
-set specification=VisioStd
-) else if !errorlevel! == 31 (
-set specification=Word
-)
-set ProductReleaseID=!specification!Retail
-if "!confirmation!" == "no" goto confirmation
-goto language
+    if !errorlevel! == 1 (
+        set specification=Access
+    ) else if !errorlevel! == 2 (
+        set specification=Excel
+    ) else if !errorlevel! == 3 (
+        set specification=Groove
+    ) else if !errorlevel! == 4 (
+        set specification=HomeBusinessPipc
+    ) else if !errorlevel! == 5 (
+        set specification=HomeBusiness
+    ) else if !errorlevel! == 6 (
+        set specification=HomeStudent
+    ) else if !errorlevel! == 7 (
+        set specification=InfoPath
+    ) else if !errorlevel! == 8 (
+        set specification=LyncAcademic
+    ) else if !errorlevel! == 9 (
+        set specification=LyncEntry
+    ) else if !errorlevel! == 10 (
+        set specification=Lync
+    ) else if !errorlevel! == 11 (
+        set specification=O365Business
+    ) else if !errorlevel! == 12 (
+        set specification=O365HomePrem
+    ) else if !errorlevel! == 13 (
+        set specification=O365ProPlus
+    ) else if !errorlevel! == 14 (
+        set specification=O365SmallBusPrem
+    ) else if !errorlevel! == 15 (
+        set specification=OneNoteFree
+    ) else if !errorlevel! == 16 (
+        set specification=OneNote
+    ) else if !errorlevel! == 17 (
+        set specification=Outlook
+    ) else if !errorlevel! == 18 (
+        set specification=PersonalPipc
+    ) else if !errorlevel! == 19 (
+        set specification=Personal
+    ) else if !errorlevel! == 20 (
+        set specification=PowerPoint
+    ) else if !errorlevel! == 21 (
+        set specification=ProfessionalPipc
+    ) else if !errorlevel! == 22 (
+        set specification=Professional
+    ) else if !errorlevel! == 23 (
+        set specification=ProjectPro
+    ) else if !errorlevel! == 24 (
+        set specification=ProjectStd
+    ) else if !errorlevel! == 25 (
+        set specification=ProPlus
+    ) else if !errorlevel! == 26 (
+        set specification=Publisher
+    ) else if !errorlevel! == 27 (
+        set specification=SPD
+    ) else if !errorlevel! == 28 (
+        set specification=Standard
+    ) else if !errorlevel! == 29 (
+        set specification=VisioPro
+    ) else if !errorlevel! == 30 (
+        set specification=VisioStd
+    ) else if !errorlevel! == 31 (
+        set specification=Word
+    )
+    set ProductReleaseID=!specification!Retail
+    if "!confirmation!" == "no" goto confirmation
+    goto language
 ) else (
-if "!confirmation!" == "no" goto confirmation
-goto version
+    if "!confirmation!" == "no" goto confirmation
+    goto version
 )
 :language
 mode con: lines=54
@@ -630,101 +630,101 @@ echo                      ------------------------------------
 echo.
 set /p language=
 if "!language!" == "ar-SA" (
-set FullLanguage=Arabic
+    set FullLanguage=Arabic
 ) else if "!language!" == "bg-BG" (
-set FullLanguage=Bulgarian
+    set FullLanguage=Bulgarian
 ) else if "!language!" == "cs-CZ" (
-set FullLanguage=Czech
+    set FullLanguage=Czech
 ) else if "!language!" == "da-DK" (
-set FullLanguage=Danish
+    set FullLanguage=Danish
 ) else if "!language!" == "de-DE" (
-set FullLanguage=German
+    set FullLanguage=German
 ) else if "!language!" == "el-GR" (
-set FullLanguage=Greek
+    set FullLanguage=Greek
 ) else if "!language!" == "en-GB" (
-set "FullLanguage=English UK"
+    set "FullLanguage=English UK"
 ) else if "!language!" == "en-US" (
-set FullLanguage=English
+    set FullLanguage=English
 ) else if "!language!" == "es-ES" (
-set FullLanguage=Spanish
+    set FullLanguage=Spanish
 ) else if "!language!" == "es-MX" (
-set "FullLanguage=Spanish Mexico"
+    set "FullLanguage=Spanish Mexico"
 ) else if "!language!" == "et-EE" (
-set FullLanguage=Estonian
+    set FullLanguage=Estonian
 ) else if "!language!" == "fi-FI" (
-set FullLanguage=Finnish
+    set FullLanguage=Finnish
 ) else if "!language!" == "fr-CA" (
-set "FullLanguage=French Canada"
+    set "FullLanguage=French Canada"
 ) else if "!language!" == "fr-FR" (
-set FullLanguage=French
+    set FullLanguage=French
 ) else if "!language!" == "he-IL" (
-set FullLanguage=Hebrew
+    set FullLanguage=Hebrew
 ) else if "!language!" == "hi-IN" (
-set FullLanguage=Hindi
+    set FullLanguage=Hindi
 ) else if "!language!" == "hr-HR" (
-set FullLanguage=Croatian
+    set FullLanguage=Croatian
 ) else if "!language!" == "hu-HU" (
-set FullLanguage=Hungarian
+    set FullLanguage=Hungarian
 ) else if "!language!" == "id-ID" (
-set FullLanguage=Indonesian
+    set FullLanguage=Indonesian
 ) else if "!language!" == "it-IT" (
-set FullLanguage=Italian
+    set FullLanguage=Italian
 ) else if "!language!" == "ja-JP" (
-set FullLanguage=Japanese
+    set FullLanguage=Japanese
 ) else if "!language!" == "kk-KZ" (
-set FullLanguage=Kazakh
+    set FullLanguage=Kazakh
 ) else if "!language!" == "ko-KR" (
-set FullLanguage=Korean
+    set FullLanguage=Korean
 ) else if "!language!" == "lt-LT" (
-set FullLanguage=Lithuanian
+    set FullLanguage=Lithuanian
 ) else if "!language!" == "lv-LV" (
-set FullLanguage=Latvian
+    set FullLanguage=Latvian
 ) else if "!language!" == "ms-MY" (
-set "FullLanguage=Malay (Latin)"
+    set "FullLanguage=Malay (Latin)"
 ) else if "!language!" == "nb-NO" (
-set "FullLanguage=Norwegian Bokmal"
+    set "FullLanguage=Norwegian Bokmal"
 ) else if "!language!" == "nl-NL" (
-set FullLanguage=Dutch
+    set FullLanguage=Dutch
 ) else if "!language!" == "pl-PL" (
-set FullLanguage=Polish
+    set FullLanguage=Polish
 ) else if "!language!" == "pt-BR" (
-set "FullLanguage=Portuguese (Brazil)"
+    set "FullLanguage=Portuguese (Brazil)"
 ) else if "!language!" == "pt-PT" (
-set FullLanguage=Portuguese
+    set FullLanguage=Portuguese
 ) else if "!language!" == "ro-RO" (
-set FullLanguage=Romanian
+    set FullLanguage=Romanian
 ) else if "!language!" == "ru-RU" (
-set FullLanguage=Russian
+    set FullLanguage=Russian
 ) else if "!language!" == "sk-SK" (
-set FullLanguage=Slovak
+    set FullLanguage=Slovak
 ) else if "!language!" == "sl-SI" (
-set FullLanguage=Slovenian
+    set FullLanguage=Slovenian
 ) else if "!language!" == "sr-latn-RS" (
-set "FullLanguage=Serbian (Latin, Serbia)"
+    set "FullLanguage=Serbian (Latin, Serbia)"
 ) else if "!language!" == "sv-SE" (
-set FullLanguage=Swedish
+    set FullLanguage=Swedish
 ) else if "!language!" == "th-TH" (
-set FullLanguage=Thai
+    set FullLanguage=Thai
 ) else if "!language!" == "tr-TR" (
-set FullLanguage=Turkish
+    set FullLanguage=Turkish
 ) else if "!language!" == "uk-UA" (
-set FullLanguage=Ukrainian
+    set FullLanguage=Ukrainian
 ) else if "!language!" == "vi-VN" (
-set FullLanguage=Vietnamese
+    set FullLanguage=Vietnamese
 ) else if "!language!" == "zh-CN" (
-set "FullLanguage=Chinese (Simplified)"
+    set "FullLanguage=Chinese (Simplified)"
 ) else if "!language!" == "zh-TW" (
-set "FullLanguage=Chinese (Traditional)"
+    set "FullLanguage=Chinese (Traditional)"
 ) else if "!language!" == "0" (
-if "!confirmation!" == "no" goto confirmation
-goto version
+    if "!confirmation!" == "no" goto confirmation
+    goto version
 ) else (
-mode con: lines=4
-echo.
-echo             Please enter the content in parentheses.
-echo.
-timeout /t 3 > nul
-goto language
+    mode con: lines=4
+    echo.
+    echo             Please enter the content in parentheses.
+    echo.
+    timeout /t 3 > nul
+    goto language
 )
 :confirmation
 mode con: lines=18
@@ -748,28 +748,28 @@ echo            If not,enter the number of the value you want to modify.
 echo.
 choice /n /c Y12340
 if !errorlevel! == 2 (
-goto InstallationType
+    goto InstallationType
 ) else if !errorlevel! == 3 (
-goto version
+    goto version
 ) else if !errorlevel! == 4 (
-goto !version!
+    goto !version!
 ) else if !errorlevel! == 5 (
-goto language
+    goto language
 ) else if !errorlevel! == 6 (
-goto start
+    goto start
 )
 if "!InstallationType!" == "Offline x32 & x64" (
-if "!FullVersion!" == "Office 2013" (
-set "FullURL=https://officecdn.microsoft.com/db/39168d7e-077b-48e7-872c-b232c3e72675/media/!language!/!ProductReleaseID!.img"
+    if "!FullVersion!" == "Office 2013" (
+        set "FullURL=https://officecdn.microsoft.com/db/39168d7e-077b-48e7-872c-b232c3e72675/media/!language!/!ProductReleaseID!.img"
+    ) else (
+        set "FullURL=https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/!language!/!ProductReleaseID!.img"
+    )
 ) else (
-set "FullURL=https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/!language!/!ProductReleaseID!.img"
-)
-) else (
-if "!FullVersion!" == "Office 2013" (
-set "FullURL=https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=!ProductReleaseID!&platform=!platform!&language=!language!&version=O15GA"
-) else (
-set "FullURL=https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=!ProductReleaseID!&platform=!platform!&language=!language!&version=O16GA"
-)
+    if "!FullVersion!" == "Office 2013" (
+        set "FullURL=https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=!ProductReleaseID!&platform=!platform!&language=!language!&version=O15GA"
+    ) else (
+        set "FullURL=https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=!ProductReleaseID!&platform=!platform!&language=!language!&version=O16GA"
+    )
 )
 :check-and-detect
 mode con: lines=8
@@ -779,33 +779,33 @@ echo.
 ping officecdn.microsoft.com > nul
 ping c2rsetup.officeapps.live.com > nul
 if !errorlevel! == 1 (
-powershell -c "Write-Host 'There is a problem with the network,please check the connection.' -ForegroundColor Red"
-echo.
-powershell -c "Write-Host 'Please check the network connection and then continue.' -ForegroundColor Blue"
-echo.
-timeout /t 3 > nul
-goto confirmation
+    powershell -c "Write-Host 'There is a problem with the network,please check the connection.' -ForegroundColor Red"
+    echo.
+    powershell -c "Write-Host 'Please check the network connection and then continue.' -ForegroundColor Blue"
+    echo.
+    timeout /t 3 > nul
+    goto confirmation
 ) else (
-powershell -c "Write-Host 'The network connection is normal.' -ForegroundColor Green"
-echo.
-timeout /t 3 > nul
-cls
+    powershell -c "Write-Host 'The network connection is normal.' -ForegroundColor Green"
+    echo.
+    timeout /t 3 > nul
+    cls
 )
 echo.
 echo Detecting whether the resource exists...
 echo.
 powershell -c "(Invoke-WebRequest -Uri '!FullURL!' -Method Head).Headers" | findstr "Content-Disposition" > nul
 if !errorlevel! == 1 (
-powershell -c "Write-Host 'The resource does not exist.' -ForegroundColor Red"
-echo.
-powershell -c "Write-Host 'Please change the parameters and try again.' -ForegroundColor Blue"
-echo.
-timeout /t 3 > nul
-goto confirmation
+    powershell -c "Write-Host 'The resource does not exist.' -ForegroundColor Red"
+    echo.
+    powershell -c "Write-Host 'Please change the parameters and try again.' -ForegroundColor Blue"
+    echo.
+    timeout /t 3 > nul
+    goto confirmation
 ) else (
-powershell -c "Write-Host 'The resource exists and the download will start soon.' -ForegroundColor Green"
-echo.
-timeout /t 3 > nul
+    powershell -c "Write-Host 'The resource exists and the download will start soon.' -ForegroundColor Green"
+    echo.
+    timeout /t 3 > nul
 )
 :download
 mode con: lines=12
@@ -814,18 +814,18 @@ echo Starting download...
 echo.
 curl -# -O -J "!FullURL!"
 if !errorlevel! == 0 (
-powershell -c "Write-Host 'The download is complete.' -ForegroundColor Green"
-echo.
-echo Returning to the menu soon.
-echo.
-pause
-goto start
+    powershell -c "Write-Host 'The download is complete.' -ForegroundColor Green"
+    echo.
+    echo Returning to the menu soon.
+    echo.
+    pause
+    goto start
 ) else (
-echo.
-powershell -c "Write-Host 'The download failed.' -ForegroundColor Red"
-echo.
-powershell -c "Write-Host 'Please try again.' -ForegroundColor Blue"
-echo.
-pause
-goto confirmation
+    echo.
+    powershell -c "Write-Host 'The download failed.' -ForegroundColor Red"
+    echo.
+    powershell -c "Write-Host 'Please try again.' -ForegroundColor Blue"
+    echo.
+    pause
+    goto confirmation
 )
