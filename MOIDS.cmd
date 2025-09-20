@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-title Microsoft Office Installer Download Script
+title Microsoft Office Installer Download Script v0.0.1
 mode con: cols=79
 color F0
 :start
